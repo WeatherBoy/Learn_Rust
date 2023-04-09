@@ -1,13 +1,8 @@
 pub fn reverse(input: &str) -> String {
-    let mut string_input = input.to_string();
-
-    let mut reversed_string = String::from("");
-
-    while !string_input.is_empty() {
-        reversed_string.push(string_input.pop().unwrap());
-    }
-
-    reversed_string
+    // chars() - makes an iterator of chars
+    // rev() - reverses the iterator
+    // collect() - collects it to a string
+    input.chars().rev().collect()
 }
 
 fn main() {
